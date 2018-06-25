@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ButtonLeftClicked.cs" />
+    <Compile Include="Assets\ButtonRightClicked.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/cw/Documents/bisslMalSchauen/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

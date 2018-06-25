@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ButtonLeftClicked : MonoBehaviour {
 
-    Sprite player;
+    public Transform player;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +17,10 @@ public class ButtonLeftClicked : MonoBehaviour {
 
     private void OnMouseDown()
     {
+
+        
+
+        player.SetPositionAndRotation(player.position+Vector3.left,Quaternion.identity);
         Debug.Log("ButtonLeftClicked");
 
     }
