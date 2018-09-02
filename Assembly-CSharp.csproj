@@ -63,6 +63,12 @@
   <ItemGroup>
     <Compile Include="Assets\ButtonLeftClicked.cs" />
     <Compile Include="Assets\ButtonRightClicked.cs" />
+    <Compile Include="Assets\DragAndDrop.cs" />
+    <Compile Include="Assets\DynamischErzeugen.cs" />
+    <Compile Include="Assets\HitByPlayer.cs" />
+    <Compile Include="Assets\PlayerHit.cs" />
+    <None Include="Assets\New UXML.uxml" />
+    <None Include="Assets\New UXML 1.uxml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/cw/Documents/bisslMalSchauen/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
