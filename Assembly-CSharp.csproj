@@ -70,6 +70,7 @@
     <Compile Include="Assets\PlayerHit.cs" />
     <None Include="Assets\New UXML.uxml" />
     <None Include="Assets\New UXML 1.uxml" />
+    <None Include="Assets\codeandweb.com\Readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/CH/Documents/bisslMalSchauen/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
