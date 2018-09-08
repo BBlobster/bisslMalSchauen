@@ -2,6 +2,7 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+<<<<<<< HEAD
 - Assets/Ressourcen/ExplosionBlock/ExplosionBlock.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
@@ -9,4 +10,10 @@ textureFileNames:
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
 - 
+=======
+textureFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+normalmapFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+>>>>>>> e0af49aefb51ed458c93a2eb68bad02c33188cf8
 enableDebugOutput: 0
