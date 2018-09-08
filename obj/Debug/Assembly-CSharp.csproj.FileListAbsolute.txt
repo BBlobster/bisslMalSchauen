@@ -43,7 +43,6 @@ C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\UnityEngine.ParticleSystemM
 C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\UnityEngine.PerformanceReportingModule.dll
 C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\UnityEngine.Physics2DModule.dll
 C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\UnityEngine.PhysicsModule.dll
-C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\UnityEngine.Purchasing.dll
 C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.dll
 C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\UnityEngine.SharedInternalsModule.dll
 C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
@@ -334,3 +333,5 @@ C:\Users\CH\Documents\bisslMalSchauen\obj\Debug\Assembly-CSharp.csproj.CoreCompi
 C:\Users\CH\Documents\bisslMalSchauen\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\CH\Documents\bisslMalSchauen\obj\Debug\Assembly-CSharp.dll
 C:\Users\CH\Documents\bisslMalSchauen\obj\Debug\Assembly-CSharp.pdb
+C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\Unity.TextMeshPro.dll
+C:\Users\cw\Documents\bisslMalSchauen\Temp\bin\Debug\Unity.TextMeshPro.Editor.dll
