@@ -7,7 +7,10 @@ public class Hit : MonoBehaviour {
 
     public GameObject blockGenerator;
     private DynamischErzeugen dynamischErzeugen;
-    private int counter;        
+    private int counter;
+    private bool destroyMe = false;
+    private Animation explodeBlock;
+    private Animator animator;
         
 
 
@@ -16,6 +19,7 @@ public class Hit : MonoBehaviour {
         blockGenerator = GameObject.Find("BlockGenerator");
         dynamischErzeugen = (DynamischErzeugen)blockGenerator.GetComponent(typeof(DynamischErzeugen));
         ChangeText.instance.counterText.text = counter.ToString();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -25,15 +29,15 @@ public class Hit : MonoBehaviour {
         if (collision.gameObject.name == "ScreenBottom")
         {
             Debug.Log(collision.gameObject.name);
-            Destroy(this.gameObject);
+            destroyMe = true;
+            
+            animator.SetTrigger("destroy");
 
             counter = dynamischErzeugen.NumberBlocks;
             
 
 
             ChangeText.instance.counterText.text = counter.ToString();
-            Debug.Log("counter" +counter);
-            Debug.Log("NumberBlocks: "+dynamischErzeugen.NumberBlocks);
             counter--;
             dynamischErzeugen.NumberBlocks = counter;
         }
@@ -42,6 +46,14 @@ public class Hit : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        
+        if (destroyMe)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("ExplosionBlock"))
+            {
+                Destroy(this.gameObject);
+                Debug.Log("BOOOM");
+            }
+                
+        }
     }
 }

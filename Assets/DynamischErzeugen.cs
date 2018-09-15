@@ -14,9 +14,7 @@ public class DynamischErzeugen : MonoBehaviour {
 
     // Use this for initialization
     void Start (){
-
-
-        
+        Time.timeScale = 1;
 
         for (y = 1; y < numberBlocks; y++)
         {
@@ -26,19 +24,15 @@ public class DynamischErzeugen : MonoBehaviour {
             rb = block.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
             thrust = -400;
             rb.AddForce(transform.up * thrust);
-        
         }
+
         block = Instantiate(sprite, new Vector3(x: 0, y: 50 * (y+1), z: 0), Quaternion.identity);
         block.transform.localScale = block.transform.localScale + new Vector3(90, Screen.height, 1);
         block.transform.SetParent(parent, false);
         rb = block.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         thrust = -400;
         rb.AddForce(transform.up * thrust);
-
-
     }
-
-    
 
     // Update is called once per frame
     void Update () {
