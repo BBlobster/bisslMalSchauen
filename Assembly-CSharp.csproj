@@ -61,19 +61,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ButtonLeftClicked.cs" />
-    <Compile Include="Assets\ButtonPauseClicked.cs" />
-    <Compile Include="Assets\ButtonRightClicked.cs" />
-    <Compile Include="Assets\ChangeText.cs" />
-    <Compile Include="Assets\DragAndDrop.cs" />
-    <Compile Include="Assets\DynamischErzeugen.cs" />
-    <Compile Include="Assets\HideOnPause.cs" />
-    <Compile Include="Assets\Hit.cs" />
-    <Compile Include="Assets\HitByPlayer.cs" />
-    <Compile Include="Assets\PlayerHit.cs" />
-    <Compile Include="Assets\scale.cs" />
-    <None Include="Assets\New UXML.uxml" />
-    <None Include="Assets\New UXML 1.uxml" />
+    <Compile Include="Assets\Scripts\BlockGenerator.cs" />
+    <Compile Include="Assets\Scripts\ButtonLeftClicked.cs" />
+    <Compile Include="Assets\Scripts\ButtonPauseClicked.cs" />
+    <Compile Include="Assets\Scripts\ButtonRightClicked.cs" />
+    <Compile Include="Assets\Scripts\ChangeText.cs" />
+    <Compile Include="Assets\Scripts\DragAndDrop.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\HideOnPause.cs" />
+    <Compile Include="Assets\Scripts\Hit.cs" />
+    <Compile Include="Assets\Scripts\PlayerHit.cs" />
+    <Compile Include="Assets\Scripts\PlayerIQLoader.cs" />
+    <Compile Include="Assets\Scripts\scale.cs" />
+    <Compile Include="Assets\Scripts\SceneInitializer.cs" />
+    <Compile Include="Assets\Scripts\SceneSwitch.cs" />
+    <Compile Include="Assets\Scripts\StartButtonClicked.cs" />
+    <Compile Include="Assets\Scripts\StatEntry.cs" />
+    <Compile Include="Assets\Scripts\StatManager.cs" />
+    <None Include="Assets\Scripts\New UXML.uxml" />
+    <None Include="Assets\Scripts\New UXML 1.uxml" />
     <None Include="Assets\codeandweb.com\Readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/cw/Documents/bisslMalSchauen/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
