@@ -8,6 +8,7 @@ public class SceneInitializer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         DontDestroyOnLoad(gameObject);
+        DataManager.InitialLoad();
         SceneManager.LoadScene(1);
     }
 	
