@@ -7,13 +7,11 @@ public class PlayerIQLoader : MonoBehaviour {
 
     public Text textPlayerIQ;
     private int playerIQ;
-    
-    
 	// Use this for initialization
 	void Start () {
         
-        playerIQ = DataManager.PlayerIQ;
         Debug.Log("PlayerIQ :"+playerIQ);
+        playerIQ = DataManager.PlayerIQ;
         textPlayerIQ.text = playerIQ.ToString();
     }
 	

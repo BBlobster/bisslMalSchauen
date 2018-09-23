@@ -18,7 +18,11 @@ public class PlayerHit : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.name);
-        gameOver(collision.name);
+        if (collision.name == "PrefabBlock(Clone)")
+        {
+            gameOver(collision.name);
+
+        }
                 
     }
 
@@ -32,6 +36,6 @@ public class PlayerHit : MonoBehaviour {
         gameController = gameManager.GetComponent<GameController>();
         int p = -1;
         if (collisionName == "Goal"){ p = 1;}
-        gameController.GameOver(p,"TestID") ;
+        gameController.GameOver(p,"BlockGame") ;
     }
 }

@@ -9,7 +9,6 @@ public class Hit : MonoBehaviour {
     private BlockGenerator blockGenerator;
     private GameObject blocks;
     private int counter;
-    private bool destroyMe = false;
     private Animation explodeBlock;
     private Animator animator;
         
@@ -30,33 +29,26 @@ public class Hit : MonoBehaviour {
         //schauen wie viele Blöcke noch da sind, 1 abziehen, die Anzeige ändern, die neue Anzahl der Blöcke zurückschreiben
         if (collision.gameObject.name == "ScreenBottom")
         {
-            Debug.Log(collision.gameObject.name);
-
-            
-            destroyMe = true;
+            Debug.Log(collision.gameObject.name);            
             
             animator.SetTrigger("destroy");
+            Debug.Log(animator.IsInTransition(0).ToString());
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
             counter = blockGenerator.NumberBlocks;
             counter--;
             ChangeText.instance.counterText.text = counter.ToString();
             blockGenerator.NumberBlocks = counter;
+            Debug.Log(animator.IsInTransition(0).ToString());
+
+            animator.SetTrigger("wrecked");
+
+
         }
 
     }
 
     // Update is called once per frame
-    void Update () {
-
-        //Ween der Schalter für Zerstörung gesetzt wurde prüfen ob die Animationa noch läuft und wenn nicht dann zertören
-        if (destroyMe)
-        {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("ExplosionBlock"))
-            {
-                Destroy(this.gameObject);
-                Debug.Log("BOOOM");
-            }
-                
-        }
+    void Update () {       
     }
 }
