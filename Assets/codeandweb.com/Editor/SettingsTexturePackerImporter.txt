@@ -2,10 +2,10 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/Ressourcen/ExplosionBlock.tpsheet
+- Assets/Ressourcen/BlockGame/ExplosionBlock.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/Ressourcen/ExplosionBlock.png
+- Assets/Ressourcen/BlockGame/ExplosionBlock.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
 - 
