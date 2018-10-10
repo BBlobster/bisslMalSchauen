@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* Loads the PlayerIQ from the Datamanager and refreshes the textPlayerIQ label.
+ */
+
 public class PlayerIQLoader : MonoBehaviour {
 
     public Text textPlayerIQ;
@@ -10,13 +13,8 @@ public class PlayerIQLoader : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         
-        Debug.Log("PlayerIQ :"+playerIQ);
         playerIQ = DataManager.PlayerIQ;
         textPlayerIQ.text = playerIQ.ToString();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

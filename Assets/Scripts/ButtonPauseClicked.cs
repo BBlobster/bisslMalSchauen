@@ -2,45 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Sets the Timescale to 0 or 1 and calls the HideMe Script of all blocks to make them invisible
+ */
+
 public class ButtonPauseClicked : MonoBehaviour {
 
     private bool paused = false;
-    private BlockGenerator blockGenerator;
 
-    private void Start()
-    {
-        blockGenerator = gameObject.AddComponent<BlockGenerator>();
-    }
+    /*The blockgenerator from the gameobject Blocks. See Editor.
+     */
+    public BlockGenerator blockGenerator;
+
+
 
     private void OnMouseDown()
     {
-        Debug.Log("Pause clicked");
-        
+        /* Showing or hiding each block 
+         */
+        for (int i = 0; i < blockGenerator.Blocks.Count; i++)
+        {
+            GameObject showOrHideMe = blockGenerator.Blocks[i];
+            if (showOrHideMe)
+            {
+                if (paused)
+                {
+                    showOrHideMe.GetComponent<HideOnPause>().Show();
+                }
+                else
+                {
+                    showOrHideMe.GetComponent<HideOnPause>().Hide();
+                }
+            }
+            else { Debug.Log("block number: " + i + "does not exist anymore"); }
+        }
+        /* starts or pause the game by setting the timescale to 1 or 0
+         */
         if (paused)
         {
             Time.timeScale = 1;
-            Debug.Log(Time.timeScale);
-            foreach (GameObject hideMe in blockGenerator.Blocks)
-            {
-                if (hideMe)
-                {
-                    hideMe.GetComponent<HideOnPause>().show();
-                }
-            }
             paused = false;
         } 
         else 
         { 
             Time.timeScale = 0;
-            Debug.Log(Time.timeScale);
-
-            foreach (GameObject hideMe in blockGenerator.Blocks)
-            {
-                if (hideMe)
-                {
-                    hideMe.GetComponent<HideOnPause>().hide();
-                }
-            }
             paused = true;
         }
     }

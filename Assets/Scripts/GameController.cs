@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*GameController ist part of the Gamemanager object
+ * It should handle the communication to the Minigams and provides BasicFunctions for them to be calles when Games are finished or need
+ * Data. For example a Random Int to Load a specific Level for Both Users.
+ */
 public class GameController : MonoBehaviour {
 
-
+    /* Is used to change Scenes
+     */
     private SceneSwitch sceneSwitch;
 
-    //GameOver regelt die Datenübergabe bei Abschluss eines Spiels. Dazu gehören Punktzahl. 
-    //eindeutge GameID(welches Spiel, welcher spieler, wann liegt am Server unter der GameID), Stats
-    public void GameOver(int points, string GameID)
+    /* Is called by finished Minigames 
+     * When Challenges are implemented it shoul call the SetPoint Function of the challenge.
+    */
+    public void GameOver(int points, string ChallengeID)
     {
-
-        PlayerPrefs.SetInt(GameID, points);
-    
+        
         sceneSwitch = gameObject.GetComponent<SceneSwitch>();
         sceneSwitch.SceneChooser();
     }

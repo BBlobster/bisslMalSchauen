@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+    /* First loaded script used for initial Loads
+     */
 public class Initializer : MonoBehaviour {
 
-	// Use this for initialization
+	/* set the Gamemanager to DontDestroyOnLoad
+     * calls Datamanager for initialLoad
+     * Calls Scenemanager to Load the Homescene
+     */
 	void Start () {
         DontDestroyOnLoad(gameObject);
         DataManager.InitialLoad();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("HomeScene");
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Drag an Drop Script for the Player.
+ * Changes the color onMouseDown and shwos the dragging in the FixedUpdate method
+ * 
+ * !!!MUSS komplett umgeschrieben werden wenn wir entschieden haben wie wir mit Smartphone Inputs umgehen!!!
+ */
 public class DragAndDrop : MonoBehaviour {
 
-    private Color mouseOverColor = Color.blue;
+    public Color mouseOverColor;
     private Color originalColor;
     private SpriteRenderer spriteRenderer;
 
@@ -36,8 +41,7 @@ public class DragAndDrop : MonoBehaviour {
         dragging = false;
     }
 
-    // Update is called once per frame
-    void Update () {
+    void FixedUpdate () {
         if (dragging)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
