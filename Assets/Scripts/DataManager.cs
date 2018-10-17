@@ -4,7 +4,7 @@ using System.Collections;
 using System.IO; // The System.IO namespace contains functions related to loading and saving files
 using UnityEngine.UI;
 
-/* The Datamanager is a static Dataprovider for the Stats, Gamemanger.
+/* The Datamanager is a static Dataprovider for the Stats, Gamemanager, homescreen....
  * It handles the loading and saving of data into the filesystem and Server.
  * As it is static it is an easy to use Dataprovider for the Stats and the Gamemanager but
  * it should not be used for heavy objects which needed temporaly only, 
@@ -38,7 +38,7 @@ public static class DataManager {
     }
     
     /*
-     * Getter/Setter for Stats loade on InitialLoad
+     * Getter/Setter for Stats load on InitialLoad
      */
     public static int PlayerIQ
     {

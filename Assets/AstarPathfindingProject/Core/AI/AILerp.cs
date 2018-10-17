@@ -59,7 +59,7 @@ namespace Pathfinding {
 		 * This is useful for 2D games in which one often want to have the Y axis as the forward direction to get sprites and 2D colliders to work properly.
 		 * \shadowimage{aibase_forward_axis.png}
 		 */
-		public bool rotationIn2D = false;
+		public bool rotationIn2D = true;
 
 		/** How quickly to rotate */
 		public float rotationSpeed = 10;
@@ -184,7 +184,7 @@ namespace Pathfinding {
 			get {
 				return !canSearchAgain;
 			}
-		}
+		} 
 
 		/** \copydoc Pathfinding::IAstarAI::isStopped */
 		public bool isStopped { get; set; }
@@ -363,8 +363,29 @@ namespace Pathfinding {
 		 * and override the function in that script.
 		 */
 		public virtual void OnTargetReached () {
-            Debug.Log("weg beendet");
 
+            RaycastHit2D hit = Physics2D.Raycast(destination, Vector2.zero, 0);
+            
+
+            if (hit)
+            {
+                Debug.Log("stopped walking and standing by: " + hit.collider.name);
+                switch (hit.collider.name)
+                {
+                    case "StairsUp":
+                        Debug.Log("jo");
+                        Teleport(gameObject.transform.localPosition + Vector3.left * 6.5f);
+                        target = gameObject.transform;
+                        Camera cam = Camera.main;
+                        cam.transform.position = cam.transform.position + Vector3.left * 7.15f;
+                        seeker.ReleaseClaimedPath();
+                        AstarPath astarPath = GetComponentInChildren<AstarPath>();
+                        astarPath.FloodFill();
+                        break;
+                }
+            }
+            
+            else {Debug.Log("can't go there");}
         }
 
         /** Called when a requested path has finished calculation.

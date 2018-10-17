@@ -14,31 +14,14 @@ namespace Pathfinding
         // Use this for initialization
         void Start()
         {
-            pathend = gameObject.GetComponent<AILerp>();
+            pathend = gameObject.GetComponentInParent<AILerp>();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Debug.Log(collision.collider.name);
-
-            if (pathend.reachedEndOfPath)
-            {
-                Debug.Log("weg beendet und steht am: "+ collision.collider.name);
-
-            }
-        }
-
-        void gameOver(string collisionName, int punkte)
+        private void GameOver(string collisionName, int punkte)
         {
             gameManager = GameObject.Find("GameManager");
             gameController = gameManager.GetComponent<GameController>();
-            gameController.GameOver(punkte, "BlockGame");
+            gameController.GameOver(punkte, "EscapeTheRoom");
         }
     }
 }

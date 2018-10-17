@@ -18,8 +18,8 @@ namespace Pathfinding {
 		IAstarAI[] ais;
 
 		/** Determines if the target position should be updated every frame or only on double-click */
-		public bool onlyOnDoubleClick;
-		public bool use2D;
+		public bool onlyOnDoubleClick = true;
+		public bool use2D = true;
 
 		Camera cam;
 
@@ -40,9 +40,7 @@ namespace Pathfinding {
 
 		/** Update is called once per frame */
 		void Update () {
-			if (!onlyOnDoubleClick && cam != null) {
-				UpdateTargetPosition();
-			}
+			
 		}
 
 		public void UpdateTargetPosition () {
